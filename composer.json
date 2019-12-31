@@ -12,7 +12,6 @@
     "require": {
         "php": "^7.1",
         "symfony/psr-http-message-bridge": "^1.0",
-        "zendframework/zend-diactoros": "^1.7",
         "psr/http-server-middleware": "^1.0"
     },
     "require-dev": {

@@ -1,5 +1,5 @@
 {
-    "name": "jshannon63/laravel-psr15-middleware",
+    "name": "dnlfine/laravel-psr15-middleware",
     "description": "Allows the Use of PSR-15 Compliant Middleware in Laravel",
     "keywords": ["middleware", "PSR-15", "Laravel"],
     "license": "MIT",

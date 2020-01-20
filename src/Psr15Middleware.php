@@ -25,6 +25,10 @@ class Psr15Middleware
      */
     public function handle($request, Closure $next, ...$parameters)
     {
+        if (strpos($request->path(), 'v2') === false) {
+            return $next($request);
+        }
+        
         $dispatcher = new Dispatcher;
 
         if ($this->mode == 'before') {

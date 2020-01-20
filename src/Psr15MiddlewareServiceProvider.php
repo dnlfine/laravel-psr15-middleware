@@ -19,7 +19,7 @@ class Psr15MiddlewareServiceProvider extends ServiceProvider
 
         $config = $this->app['config'];
 
-        if ($config->get('psr15middleware')) {
+        if ($config->get('psr15middleware') && !app()->environment('production')) {
             foreach ($config->get('psr15middleware.middleware') as $key => $middleware) {
                 $this->app->singleton('psr15.middleware.'.$key, function () use ($middleware) {
                     return new Psr15Middleware($middleware[0], $middleware[2]);

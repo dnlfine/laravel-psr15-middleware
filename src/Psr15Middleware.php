@@ -25,7 +25,7 @@ class Psr15Middleware
      */
     public function handle($request, Closure $next, ...$parameters)
     {
-        if (strpos($request->path(), 'v2') === false) {
+        if (strpos($request->path(), 'v2/') === false && strpos($request->path(), 'api/') === false) {
             return $next($request);
         }
         
